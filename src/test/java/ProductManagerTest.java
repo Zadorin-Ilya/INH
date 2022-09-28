@@ -68,4 +68,25 @@ public class ProductManagerTest {
 
         Assertions.assertArrayEquals(expected, actual);
     }
+    @Test
+    public void Testauthor() {
+        Repository repo = new Repository();
+        ProductManager productManager = new ProductManager(repo);
+
+        Book book1 = new Book(110, "Gray", 128, "Joy");
+        Book book2 = new Book(210, "Gray 2", 420, "Joy");
+        Book book3 = new Book(368, "Gray 3", 800, "Joy");
+        Book book4 = new Book(404, "Gray 4", 128, "Joy");
+
+        ProductManager.add(book1);
+        ProductManager.add(book2);
+        ProductManager.add(book3);
+        ProductManager.add(book4);
+
+        Product[] actual = ProductManager.searchBy("Gray");
+        Product[] expected = {book1,book2,book3,book4};
+
+
+        Assertions.assertArrayEquals(expected, actual);
+    }
 }

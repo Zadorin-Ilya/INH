@@ -9,8 +9,9 @@ public class ProductManager {
         repository.add(product);
     }
 
-    public void removeById(int id) {
+    public static Product[] removeById(int id) {
         repository.removeByid(id);
+        return new Product[0];
     }
 
     public static Product[] searchBy(String text) {
