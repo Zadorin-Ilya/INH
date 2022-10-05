@@ -34,10 +34,11 @@ public class ProductManager {
     public static boolean matches(Product product, String search) {
         if (product.getTitle().contains(search)) {
             return true;
-        } else {
-            return false;
-        }
+        } return false;
+
         // или в одну строку:
         // return product.getName().contains(search);
     }
+
+
 }

@@ -1,16 +1,17 @@
 public class Smartphone extends Product {
-    protected int vendor;
-
-    public Smartphone(int id, String title, int price, int vendor) {
+    public Smartphone(int id, String title, int price, String vendor) {
         super(id, title, price);
         this.vendor = vendor;
     }
 
-    public int getVendor() {
+    public String getVendor() {
         return vendor;
     }
 
-    public void setVendor(int vendor) {
+    public void setVendor(String vendor) {
         this.vendor = vendor;
     }
+
+    protected String vendor;
 }
+

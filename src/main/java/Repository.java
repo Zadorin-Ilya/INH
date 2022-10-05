@@ -1,6 +1,7 @@
 public class Repository {
 
     protected Product[] products = new Product[0];
+    private Product[] result;
 
 
     public void add(Product product) {
@@ -21,9 +22,10 @@ public class Repository {
                 copyToindex++;
             }
         }
-
         products = tmp;
+
     }
+
 
     public Product[] findAll() {
         return products;

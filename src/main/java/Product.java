@@ -1,8 +1,6 @@
-public class Product {
+import java.util.Collection;
 
-    protected int id;
-    protected String title;
-    protected int price;
+public abstract class Product {
 
     public Product(int id, String title, int price) {
         this.id = id;
@@ -33,4 +31,9 @@ public class Product {
     public void setPrice(int price) {
         this.price = price;
     }
+
+    protected int id;
+    protected String title;
+    protected int price;
+
 }

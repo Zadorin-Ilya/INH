@@ -1,6 +1,4 @@
 public class Book extends Product {
-    protected String author;
-
     public Book(int id, String title, int price, String author) {
         super(id, title, price);
         this.author = author;
@@ -13,4 +11,9 @@ public class Book extends Product {
     public void setAuthor(String author) {
         this.author = author;
     }
+
+    protected String author;
+
+
+
 }
